@@ -1,0 +1,3 @@
+content,install,url,jar:resource:/chrome/diggler.jar!/content/diggler/
+skin,install,url,jar:resource:/chrome/diggler.jar!/skin/modern/diggler/
+locale,install,url,jar:resource:/chrome/diggler.jar!/locale/en-US/diggler/
