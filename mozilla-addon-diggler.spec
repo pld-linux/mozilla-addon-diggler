@@ -1,4 +1,5 @@
-Summary:	Clear location button next to the location bar.
+Summary:	Clear location button next to the location bar
+Summary(pl):	Przycisk do usuwania informacji o adresie strony
 Name:		mozilla-addon-diggler
 %define		_realname	diggler
 Version:	0.1
@@ -23,6 +24,14 @@ Konqueror. It also has a drop down menu with some more useful actions such
 as being able to navigate to parent directories in URLs. This feature is
 especially handy for FTP operations.
 
+%description -l pl
+Diggler to ma³y dodatek do funkcjonalno¶ci przegl±darki w Mozilli.
+Dodaje przycisk czyszcz±cy informacjê o adresie strony zaraz obok tego
+paska - podobnie jak jest to w Konquerorze. Ma tak¿e rozwijane menu z
+u¿ytecznymi funkcjami, takimi jak przechodzenie do katalogów
+nadrzêdnych w URL-ach. Jest to przydatne zw³aszcza przy operacjach na
+FTP.
+
 %prep
 
 %install
@@ -32,14 +41,14 @@ install -d $RPM_BUILD_ROOT%{_chromedir}
 unzip %{SOURCE0} -d $RPM_BUILD_ROOT%{_chromedir}
 install %{SOURCE1} $RPM_BUILD_ROOT%{_chromedir}
 
+%clean
+rm -rf $RPM_BUILD_ROOT
+
 %post
 cat %{_chromedir}/*-installed-chrome.txt >%{_chromedir}/installed-chrome.txt
 
 %postun
 cat %{_chromedir}/*-installed-chrome.txt >%{_chromedir}/installed-chrome.txt
-
-%clean
-rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
