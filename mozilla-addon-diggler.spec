@@ -7,6 +7,7 @@ Release:	1
 License:	GPL
 Group:		X11/Applications/Networking
 Source0:	http://diggler.mozdev.org/%{_realname}-%{version}.xpi
+# Source0-md5:	b49038ac2a91bb7b48201aca07ba6604
 Source1:	%{_realname}-installed-chrome.txt
 URL:		http://diggler.mozdev.org/
 BuildRequires:	unzip
