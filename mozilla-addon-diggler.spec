@@ -6,7 +6,7 @@ Version:	0.7
 Release:	3
 License:	GPL
 Group:		X11/Applications/Networking
-Source0:	http://download.mozdev.org/%{_realname}/%{_realname}-%{version}.xpi
+Source0:	http://download.mozdev.org/diggler/%{_realname}-%{version}.xpi
 # Source0-md5:	d1d20959032ddc76b460a9d5342cb5a8
 Source1:	%{_realname}-installed-chrome.txt
 URL:		http://diggler.mozdev.org/
@@ -15,7 +15,7 @@ Requires(post,postun):	mozilla >= 1.7.3-3
 Requires(post,postun):	textutils
 Requires:	mozilla >= 1.0-7
 BuildArch:	noarch
-BuildRoot:	%{tmpdir}/%{_realname}-%{version}-root-%(id -u -n)
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_chromedir	%{_datadir}/mozilla/chrome
 
