@@ -2,12 +2,12 @@ Summary:	Clear location button next to the location bar
 Summary(pl):	Przycisk do usuwania informacji o adresie strony
 Name:		mozilla-addon-diggler
 %define		_realname	diggler
-Version:	0.7
-Release:	3
+Version:	0.9b
+Release:	1
 License:	GPL
 Group:		X11/Applications/Networking
 Source0:	http://download.mozdev.org/diggler/%{_realname}-%{version}.xpi
-# Source0-md5:	d1d20959032ddc76b460a9d5342cb5a8
+# Source0-md5:	f493ecb3ae1e93cdf7a54079479ddaf0
 Source1:	%{_realname}-installed-chrome.txt
 URL:		http://diggler.mozdev.org/
 BuildRequires:	unzip
