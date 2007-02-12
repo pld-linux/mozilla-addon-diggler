@@ -1,5 +1,5 @@
 Summary:	Clear location button next to the location bar
-Summary(pl):	Przycisk do usuwania informacji o adresie strony
+Summary(pl.UTF-8):   Przycisk do usuwania informacji o adresie strony
 Name:		mozilla-addon-diggler
 %define		_realname	diggler
 Version:	0.9b
@@ -26,12 +26,12 @@ Konqueror. It also has a drop down menu with some more useful actions such
 as being able to navigate to parent directories in URLs. This feature is
 especially handy for FTP operations.
 
-%description -l pl
-Diggler to ma³y dodatek do funkcjonalno¶ci przegl±darki w Mozilli.
-Dodaje przycisk czyszcz±cy informacjê o adresie strony zaraz obok tego
-paska - podobnie jak jest to w Konquerorze. Ma tak¿e rozwijane menu z
-u¿ytecznymi funkcjami, takimi jak przechodzenie do katalogów
-nadrzêdnych w URL-ach. Jest to przydatne zw³aszcza przy operacjach na
+%description -l pl.UTF-8
+Diggler to maÅ‚y dodatek do funkcjonalnoÅ›ci przeglÄ…darki w Mozilli.
+Dodaje przycisk czyszczÄ…cy informacjÄ™ o adresie strony zaraz obok tego
+paska - podobnie jak jest to w Konquerorze. Ma takÅ¼e rozwijane menu z
+uÅ¼ytecznymi funkcjami, takimi jak przechodzenie do katalogÃ³w
+nadrzÄ™dnych w URL-ach. Jest to przydatne zwÅ‚aszcza przy operacjach na
 FTP.
 
 %prep
