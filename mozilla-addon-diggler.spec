@@ -1,7 +1,7 @@
+%define		_realname	diggler
 Summary:	Clear location button next to the location bar
 Summary(pl.UTF-8):	Przycisk do usuwania informacji o adresie strony
 Name:		mozilla-addon-diggler
-%define		_realname	diggler
 Version:	0.9b
 Release:	1
 License:	GPL
@@ -20,11 +20,11 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		_chromedir	%{_datadir}/mozilla/chrome
 
 %description
-Diggler is a simple add-on to the navigator functionality in Mozilla. It
-adds a clear location button next to the location bar much like the one in
-Konqueror. It also has a drop down menu with some more useful actions such
-as being able to navigate to parent directories in URLs. This feature is
-especially handy for FTP operations.
+Diggler is a simple add-on to the navigator functionality in Mozilla.
+It adds a clear location button next to the location bar much like the
+one in Konqueror. It also has a drop down menu with some more useful
+actions such as being able to navigate to parent directories in URLs.
+This feature is especially handy for FTP operations.
 
 %description -l pl.UTF-8
 Diggler to mały dodatek do funkcjonalności przeglądarki w Mozilli.
@@ -49,10 +49,12 @@ mv $RPM_BUILD_ROOT%{_chromedir}/chrome/%{_realname}.jar $RPM_BUILD_ROOT%{_chrome
 rm -rf $RPM_BUILD_ROOT
 
 %post
-%{_sbindir}/mozilla-chrome+xpcom-generate
+if [ "$1" = 1 ]; then
+	%{_sbindir}/mozilla-chrome+xpcom-generate
+fi
 
 %postun
-%{_sbindir}/mozilla-chrome+xpcom-generate
+[ ! -x %{_sbindir}/mozilla-chrome+xpcom-generate ] || %{_sbindir}/mozilla-chrome+xpcom-generate
 
 %files
 %defattr(644,root,root,755)
